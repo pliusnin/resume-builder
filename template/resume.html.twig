@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My resume</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <style>
+            html {
+                height: 100%;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                color: #3c4240;
+                height: 100%;
+            }
+            .row {
+                display: -webkit-box;
+            }
+            .label,
+            .label-inversed {
+                padding: 5px 10px;
+                margin: 5px 0 15px;
+                text-transform: uppercase;
+            }
+            .label {
+                color: #000;
+                border-bottom: 1px solid #3c4240;
+            }
+            .label-inversed {
+                color: #FFF;
+                border-bottom: 1px solid #FFFFFF;
+            }
+            .t-dec-1 {
+                font-size: .7rem;
+            }
+            .t-dec-2 {
+                font-size: .825rem;
+            }
+            .progress {
+                width: 100%;
+                background: #ccc;
+                border-radius: 4px;
+                height: 6px;
+            }
+            .progress > div {
+                background: #56c8ea;
+                height: 6px;
+            }
+            .text-black {
+                color: #000;
+            }
+            .text-grey {
+                color: #aaa;
+            }
+        </style>
+    </head>
+    <body class="h-100">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-4 h-100 d-flex flex-column">
+                    <div class="p-4 text-center" style="background-color: #56c8ea">
+                        <div class="p-3">
+                            <img src="{{ projectRoot }}/resources/ava_dmitry_500.jpg" alt="logo" class="img-fluid rounded-circle" />
+                        </div>
+                        <h1>{{ name }}</h1>
+                        <h2>{{ position }}</h2>
+                    </div>
+                    <div class="p-4 flex-fill" style="background-color: #3c4240; color: #FFF;">
+                        <h3 class="label-inversed">Contact & Links</h3>
+                        {% for name, value in contact %}
+                        <div class="px-3 pb-3">
+                            <div class="pb-1">{{ name }}:</div>
+                            <div class="t-dec-1">{{ value }}</div>
+                        </div>
+                        {% endfor %}
+
+                        <h3 class="label-inversed">Education & Courses</h3>
+
+                        <h3 class="label-inversed">Languages</h3>
+                        {% for name, value in languages %}
+                            <div class="px-3 pb-3">
+                                <div class="pb-1">{{ name }}:</div>
+                                <div class="t-dec-1">{{ value }}</div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-8 right">
+                    <div class="p-5">
+                        <h3 class="label">Skills & Expertise</h3>
+                        <div class="mb-2">
+                            <div class="row">
+                                {% for name, value in skills %}
+                                <div class="col-6 mb-3 px-2">
+                                    <div class="mb-1">{{ name }}</div>
+                                    <div class="progress">
+                                        <div style="width: {{ value }}%;"></div>
+                                    </div>
+                                </div>
+                                    {% if loop.index is even %}
+                            </div>
+                            <div class="row">
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <h3 class="label">Work experience</h3>
+                        <div class="px-2 mb-4">
+                            <ul class="list-unstyled">
+                                {% for project in experience %}
+                                <li>
+                                    <div class="row">
+                                        <div class="col-6 text-black">{{ project.position }}</div>
+                                        <div class="col-6 text-end t-dec-2">{{ project.period }}</div>
+                                    </div>
+                                    <div class="pb-1 text-grey">{{ project.company }}, {{ project.country }}</div>
+                                    <div class="t-dec-2">
+                                        <p>{{ project.description|raw }}</p>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                        <h3 class="label">About me</h3>
+                        <div class="px-2 mb-4 t-dec-2">
+                            <p>{{ aboutme|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "pliusnin/resume-builder",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "dmitrypliusnin",
+      "email": "pliusnin@gmail.com"
+    }
+  ],
+  "require": {
+    "twig/twig": "^3.0",
+    "knplabs/knp-snappy": "^1.0",
+    "ext-json": "*"
+  }
+}
