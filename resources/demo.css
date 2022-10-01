@@ -1,0 +1,13 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.col-1 {
+    width: 33%;
+}
+
+.col-2 {
+    width: 67%;
+}

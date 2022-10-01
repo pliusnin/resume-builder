@@ -18,13 +18,19 @@ $snappy->setOptions([
     'margin-right' => 0
 ]);
 
-$data = json_decode(file_get_contents(__DIR__ . '/resources/data.json'), true);
+$options = array_merge([
+    'data' => 'resources/demo.json',
+    'template' => 'demo.html.twig',
+    'output' => 'result/resume.pdf'
+], getopt('', ['data::', 'template::', 'output::']));
+
+$data = json_decode(file_get_contents(__DIR__ . '/' . $options['data']), true);
 
 try {
-    $html = $twig->render('resume.html.twig', array_merge([
+    $html = $twig->render($options['template'], array_merge([
         'projectRoot' => __DIR__,
     ], $data));
-    $snappy->generateFromHtml($html, './result/resume.pdf', [], true);
+    $snappy->generateFromHtml($html, __DIR__ . '/' . $options['output'], [], true);
     print_r('Successfully generated');
 } catch (Error\LoaderError | Error\RuntimeError | Error\SyntaxError $e) {
 }

@@ -77,6 +77,15 @@
                         {% endfor %}
 
                         <h3 class="label-inversed">Education & Courses</h3>
+                        {% for item in education %}
+                            <div class="px-3 pb-3">
+                                <div class="pb-1">{{ item.speciality }}</div>
+                                <div class="t-dec-1">
+                                    {{ item.degree }}<br/>
+                                    {{ item.school }}, {{ item.city }}, {{ item.period }}
+                                </div>
+                            </div>
+                        {% endfor %}
 
                         <h3 class="label-inversed">Languages</h3>
                         {% for name, value in languages %}

@@ -1,0 +1,52 @@
+{
+  "name": "First Lastname",
+  "position": "Frontend Developer",
+  "contact": {
+    "Phone": "+1234567890",
+    "Email": "demo-developer@gmail.com",
+    "Github": "https://github.com/demo-developer",
+    "LinkedIn": "https://www.linkedin.com/in/demo-developer-a1234567"
+  },
+  "languages": {
+    "English": "B1 (Upper-intermediate)",
+    "German": "Native"
+  },
+  "skills": {
+    "Javascript": 95,
+    "PHP": 85,
+    "Vue.js": 90,
+    "React": 75,
+    "Symfony": 80,
+    "HTML, SCSS": 95,
+    "Bootstrap 4/5": 99,
+    "RestAPI": 90,
+    "Git": 80,
+    "Docker": 30
+  },
+  "education": [
+    {
+      "degree": "Master's degree",
+      "school": "Any University",
+      "city": "Berlin",
+      "period": "2006 - 2011",
+      "speciality": "Math & Physics, Programmer Engineer"
+    }
+  ],
+  "experience" : [
+    {
+      "position": "Middle Software Developer",
+      "company": "Amazon",
+      "country": "USA",
+      "period": "Nov 2019 - Aug 2022",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text."
+    },
+    {
+      "position": "Junior Software Developer",
+      "company": "Google Inc",
+      "country": "Germany",
+      "period": "Sep 2018 - Dec 2019",
+      "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
+    }
+  ],
+  "aboutme": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+}

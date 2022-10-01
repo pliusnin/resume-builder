@@ -1,5 +1,7 @@
 .idea/
-resources/
+resources/*
+!/resources/demo.css
+!/resources/demo.json
 vendor/
 result/*
 !/result/.gitkeep
