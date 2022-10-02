@@ -1,6 +1,7 @@
 {
   "name": "First Lastname",
   "position": "Frontend Developer",
+  "photo": "resources/ava_dmitry_500.jpg",
   "contact": {
     "Phone": "+1234567890",
     "Email": "demo-developer@gmail.com",

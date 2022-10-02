@@ -1,13 +1,48 @@
-.container {
+html {
+    height: 100%;
+}
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #3c4240;
+    height: 100%;
+}
+.row {
+    display: -webkit-box;
+}
+.label,
+.label-inversed {
+    padding: 5px 10px;
+    margin: 5px 0 15px;
+    text-transform: uppercase;
+}
+.label {
+    color: #000;
+    border-bottom: 1px solid #3c4240;
+}
+.label-inversed {
+    color: #FFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+.t-dec-1 {
+    font-size: .7rem;
+}
+.t-dec-2 {
+    font-size: .825rem;
+}
+.progress {
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    background: #ccc;
+    border-radius: 4px;
+    height: 6px;
 }
-
-.col-1 {
-    width: 33%;
+.progress > div {
+    background: #56c8ea;
+    height: 6px;
 }
-
-.col-2 {
-    width: 67%;
+.text-black {
+    color: #000;
+}
+.text-grey {
+    color: #aaa;
 }

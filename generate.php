@@ -24,7 +24,9 @@ $options = array_merge([
     'output' => 'result/resume.pdf'
 ], getopt('', ['data::', 'template::', 'output::']));
 
-$data = json_decode(file_get_contents(__DIR__ . '/' . $options['data']), true);
+if (null === $data = json_decode(file_get_contents(__DIR__ . '/' . $options['data']), true)) {
+    print_r('Content is not a valid JSON. Filename: ' . $options['data']);
+}
 
 try {
     $html = $twig->render($options['template'], array_merge([
@@ -33,4 +35,5 @@ try {
     $snappy->generateFromHtml($html, __DIR__ . '/' . $options['output'], [], true);
     print_r('Successfully generated');
 } catch (Error\LoaderError | Error\RuntimeError | Error\SyntaxError $e) {
+    print_r('Error occurred: ' . $e->getMessage());
 }
